@@ -1,0 +1,32 @@
+.price{
+    margin:15px 0 0;
+    font-weight:800;
+    color:#0da8e4
+}
+.detail-section{
+    margin-top:60px
+}
+
+ .btn-info{
+    color:#fff;
+    background-color:#0da8e4!important;
+    border-color:#0da8e4!important
+}
+a.primary-btn{
+    background:#05143f;
+    padding:7px 20px;
+    text-align:center;
+    display:inline-block;
+    color:#fff;
+    border-radius:2px;
+    font-size:14px;
+    margin-top:5px
+}
+a.primary-btn:hover{
+    background:#0da8e4;
+    color:#fff
+}
+
+.active-link {
+  font-weight: bold;
+}

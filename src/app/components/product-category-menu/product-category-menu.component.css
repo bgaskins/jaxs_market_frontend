@@ -1,0 +1,24 @@
+nav, ul {
+    margin-top: 10em;
+}
+
+li, a {
+    margin-top: 2em;
+    margin-left: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #e7d9c8;
+    text-decoration: none;
+    width:auto;
+    padding:0px 10px;
+    }
+    
+h6 {
+    margin-top: -1.5em;
+    margin-left: .5em;
+    text-align: left;
+    color: #e7d9c8;;
+    text-decoration: none;
+    width:auto;
+    padding:0px 10px;
+    }

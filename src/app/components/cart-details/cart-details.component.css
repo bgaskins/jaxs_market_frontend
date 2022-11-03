@@ -1,0 +1,38 @@
+.section-content {
+    margin-top: 10em;
+}
+
+.table{
+    margin:0
+}
+table.table.table-bordered{
+    border:1px solid #ccc;
+    background:#fff
+}
+.table-bordered td,.table-bordered th{
+    border:1px solid #dee2e6
+}
+table.table.table-bordered th{
+    background:#4a4c9a;
+    color:#fff;
+    font-size:14px;
+    padding:7px
+}
+.table-responsive{
+    padding-right:1px
+}
+.items select{
+    width:100px;
+    height:40px;
+    border-radius:40px;
+    padding-left:15px;
+    margin-bottom:10px;
+    outline:0;
+    margin-left:5px
+}
+
+.btn {
+    background:#000000;
+    color:#ffffff;
+
+}

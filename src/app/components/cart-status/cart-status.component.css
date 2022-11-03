@@ -1,0 +1,16 @@
+.cart {
+    border: none;
+}
+
+fa-icon {
+    margin-right: 3em;
+    color: #ffffff;
+    left: 0;
+    right: 0;
+}
+
+.total {
+    background: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
