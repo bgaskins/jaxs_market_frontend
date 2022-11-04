@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
 <div class="detail-section">
     <div class="container-fluid">
 
@@ -8,12 +10,13 @@
         </div>
         
         <div class="price">{{ product.unitPrice | currency:'USD' }}</div>
-        <button (click)="addToCart()" class="btn btn-primary>">Add to cart</button>
 
-        <hr>
         <h4>Description</h4>
         <p>{{ product.description }}</p>
 
+        <button (click)="addToCart()" class="btn btn-primary>">Add to cart</button>
+
+        <hr>
 
         <a routerLink="/products" class="mt-5">Back to Product List</a>
     </div>

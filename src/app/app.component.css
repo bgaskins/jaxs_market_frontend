@@ -1,15 +1,15 @@
 .page-container{
     background:#ffffff;
-    padding-left:200px
+    padding-left:200px;
+    height: 100vh;
 
 }
 
 
 .category-menu {
     margin-top: 2em;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    background-color: rgb(0, 47, 117);
+    background-color: rgb(0, 95, 163);
     text-decoration: none;
     height: 100vh;
     width:12em;
@@ -30,25 +30,28 @@ a, a:hover, a:focus {
 
 .navbar {
     padding:15px 10px;
-    margin-bottom: 40px;
+    margin-bottom: 2em;
     color: #ffffff;
     background-color: #61B9C2;
+    font-family: 'Readex Pro', sans-serif;
     box-shadow: inset;
+
 }
 
 nav {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   }
 
-
+  .nav-link {
+    color: #ffffff;
+    background-color: #61B9C2;
+    font-family: 'Readex Pro', sans-serif;
+    margin-right:1.5em;
+  }
 
 .navbar-sidebar{
     padding:35px;
     padding-bottom:0
-}
-
-.navbar-sidebar .navbar-list li a:hover{
-    color:#0da8e4
 }
 
 
@@ -56,6 +59,6 @@ nav {
     text-align: center;
     height: 75px;
     width: 180px;
-    margin-left: 18em;
+    margin-left: 30em;
 
 }
