@@ -14,6 +14,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     CartDetailsComponent,
     CheckoutComponent,
     ContactUsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
