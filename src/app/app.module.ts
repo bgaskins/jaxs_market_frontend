@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CheckoutComponent,
     ContactUsComponent,
     FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

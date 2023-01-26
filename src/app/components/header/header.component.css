@@ -1,0 +1,23 @@
+.navbar {
+    color: #ffffff;
+    background-color: #61B9C2;
+    font-family: 'Readex Pro', sans-serif;
+    box-shadow: inset;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+
+}
+
+
+.nav-link {
+    color: #ffffff;
+    background-color: #61B9C2;
+    font-family: 'Readex Pro', sans-serif;
+    margin-right:1.5em;
+  }
+
+
+  
+.logo {
+    height: 75px;
+    width: 180px;
+}

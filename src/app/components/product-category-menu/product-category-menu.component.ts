@@ -10,7 +10,7 @@ import { ProductServiceService } from '../../services/product-service.service';
 export class ProductCategoryMenuComponent implements OnInit {
 
   productCategories: ProductCategory[] = [];
-  
+
   constructor(private productService: ProductServiceService) { }
 
   ngOnInit() {

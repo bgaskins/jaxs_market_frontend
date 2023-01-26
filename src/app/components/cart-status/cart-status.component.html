@@ -1,5 +1,10 @@
 <!--Shopping cart logo and link-->
-<div class="cart">
+<div class="cart-details">
   <a routerLink="/cart-details">
-      <fa-icon [icon]="faBasketShopping"></fa-icon> </a>
+      <div class="total">
+        <fa-icon [icon]="faBasketShopping"></fa-icon>
+        {{ totalPrice | currency: 'USD' }}
+        <span>{{ totalQuantity }}</span> 
+      </div> 
+  </a>
 </div>

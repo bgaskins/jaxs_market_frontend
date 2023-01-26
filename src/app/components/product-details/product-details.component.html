@@ -1,23 +1,21 @@
-<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-
 <div class="detail-section">
     <div class="container-fluid">
 
         <img src="{{ product.imageUrl }}" class="detail-img">
 
         <div>
-        <h3>{{ product.name }}</h3>
+            <h3>{{ product.name }}</h3>
         </div>
         
         <div class="price">{{ product.unitPrice | currency:'USD' }}</div>
 
-        <h4>Description</h4>
-        <p>{{ product.description }}</p>
+            <h4>Description</h4>
+            <p>{{ product.description }}</p>
 
         <button (click)="addToCart()" class="btn btn-primary>">Add to cart</button>
 
         <hr>
 
-        <a routerLink="/products" class="mt-5">Back to Product List</a>
+        <a routerLink="/home" class="mt-5">Home</a>
     </div>
 </div>

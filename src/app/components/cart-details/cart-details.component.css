@@ -1,6 +1,9 @@
-
 .section-content {
     margin-top: 10em;
+}
+
+#product-details {
+   width: 50%;
 }
 
 .table{

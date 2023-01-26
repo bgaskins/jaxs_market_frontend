@@ -1,17 +1,11 @@
-html {
-    height: 100vh;
-}
-
-
 .product-info, img {
-    width: 150px;
-    height: 175px;
+    width: 130px;
+    height: 170px;
 }
 
 .product-info {
     width: 100vw;
     margin-top: 8em;
-    margin-left: 1em;
 }
 
 .price{

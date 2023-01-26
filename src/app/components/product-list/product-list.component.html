@@ -1,25 +1,18 @@
-<link href="https://fonts.googleapis.com/css2?family=Alata&family=Readex+Pro&display=swap" rel="stylesheet">
-
-
-<div class="main-content">
-    <div class="section-content section-content">
-        <div class="container-fluid">
-            <div class="row">
-
-                <div *ngFor="let tempProduct of products" class="col-md-3 h-100">
-
-                    <div class="product-info">
-
-                        <a routerLink="/products/{{ tempProduct.id }}">
-                            <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+<div class="container" id="product-view">
+    <div class="row">
+        <div *ngFor="let tempProduct of products" class="col-lg-3 h-100">
+            <div class="product-info">
+                <a routerLink="/products/{{ tempProduct.id }}">
+                    <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
                         </a>
 
                         <a routerLink="/products/{{ tempProduct.id }}">
                             <h1>{{ tempProduct.name }}</h1>
                         </a>
                         
-                        <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
-                        <button (click)="addToCart(tempProduct)" class="btn btn-sm>">Add to cart</button>
+                        <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}
+                        </div>
+                            <button (click)="addToCart(tempProduct)" class="btn btn-sm>">Add to cart</button>
                     </div>
 
                 </div>
@@ -30,5 +23,3 @@
                 </div>
             </div>
         </div>
-    </div>
-</div> 

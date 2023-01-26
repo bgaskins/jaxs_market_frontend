@@ -1,26 +1,19 @@
-<link href="https://fonts.googleapis.com/css2?family=Alata&family=Readex+Pro&display=swap" rel="stylesheet">
+  <div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
 
-<div class="menu-sidebar-content js-scrollbar1">
-  <nav class="navbar-sidebar">
-      <ul class="list-unstyled navbar-list">
+          <!--All product categories from database-->
+            <li *ngFor="let tempProductCategory of productCategories">
 
-        <!--All product categories from database-->
-          <li *ngFor="let tempProductCategory of productCategories">
+                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+                    {{ tempProductCategory.categoryName }}
+                </a>
 
-              <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-                  {{ tempProductCategory.categoryName }}
-              </a>
-
-          </li>
-          <li>
-            <a routerLink="/products/" routerLinkActive="active-link">
-            <h6>All Products</h6>
-            </a>
-          </li>
-          <li>
-            <button class="btn btn-lg>">Need help?</button>
-          </li>
-      
-      </ul>
-  </nav>
-</div>
+            </li>
+            <li>
+              <button class="btn btn-lg>">Need help?</button>
+            </li>
+        
+        </ul>
+    </nav>
+  </div>
