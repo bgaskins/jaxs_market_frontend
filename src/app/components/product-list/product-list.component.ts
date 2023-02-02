@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
   currentCategoryId: number = 1;
   searchMode: boolean = false;
 
+
   constructor(private productService: ProductServiceService,
     private cartService: CartService,
     private route: ActivatedRoute) { }
@@ -75,5 +76,7 @@ export class ProductListComponent implements OnInit {
     console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
     const theCartItem = new CartItem(theProduct);
     this.cartService.addToCart(theCartItem);
+    alert("Added to cart");
   }
+
 }

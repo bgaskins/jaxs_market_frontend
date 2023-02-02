@@ -1,19 +1,20 @@
-  <div class="menu-sidebar-content js-scrollbar1">
-    <nav class="navbar-sidebar">
-        <ul class="list-unstyled navbar-list">
+<nav class="sidebar">
 
-          <!--All product categories from database-->
-            <li *ngFor="let tempProductCategory of productCategories">
+    <ul class="nav-list">
+      <div class="close" (click)="toggleNavList('close')">
+        <fa-icon [icon]="faBars" alt="close"></fa-icon>
+      </div>
+          <li *ngFor="let tempProductCategory of productCategories">
+            <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+              {{ tempProductCategory.categoryName }}
+            </a>
+          </li>      
+          <li>
+            <button class="btn btn-lg>">Need help?</button>
+          </li>
+      </ul>
 
-                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-                    {{ tempProductCategory.categoryName }}
-                </a>
-
-            </li>
-            <li>
-              <button class="btn btn-lg>">Need help?</button>
-            </li>
-        
-        </ul>
-    </nav>
-  </div>
+      <div class="open" (click)="toggleNavList('open')">
+        <fa-icon [icon]="faBars" alt="close"></fa-icon>
+      </div>
+</nav> 

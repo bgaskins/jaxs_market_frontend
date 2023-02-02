@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCategory } from '../../common/product-category';
 import { ProductServiceService } from '../../services/product-service.service';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-product-category-menu',
@@ -10,6 +12,7 @@ import { ProductServiceService } from '../../services/product-service.service';
 export class ProductCategoryMenuComponent implements OnInit {
 
   productCategories: ProductCategory[] = [];
+  faBars = faBars;
 
   constructor(private productService: ProductServiceService) { }
 
@@ -28,5 +31,14 @@ export class ProductCategoryMenuComponent implements OnInit {
     );
   }
 
+
+
+  toggleNavList(action: string) {// this function opening the side menu in the mobile screen
+
+    action == 'open' ?
+      document.querySelector('.nav-list')?.classList.add('active')
+      : document.querySelector('.nav-list')?.classList.remove('active');
+
+  }
 }
 
