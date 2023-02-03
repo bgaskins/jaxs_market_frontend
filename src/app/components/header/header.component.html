@@ -1,19 +1,4 @@
-<!--<nav class="navbar">
-  <div class="logo">
-    <a href="/products">
-      <img src="assets/images/jaxslogo.png" class="logo" alt="Jax's Market">
-    </a>
-  </div>
-  <div class="nav-links">
-    <ul>
-      <li>
-        <a routerLink="/contact-us" class="nav-link">Contact Us</a>
-      </li>
-    </ul>
-        <app-cart-status></app-cart-status>
-    </div> -->
-
-<nav class="navbar">
+<nav>
   <div class="logo">
     <a href="/products">
       <img src="assets/images/jaxslogo.png" alt="Jax's Market">
@@ -26,8 +11,17 @@
       </div>
       <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Who We Are</a></li>
       <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Specials</a></li>
-      <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Find Us</a></li>
+      <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Locations</a></li>
       <div class="cart-status"><app-cart-status></app-cart-status></div>
+    
+      <div id="categories">
+      <h6>Search Departments:</h6>
+      <li *ngFor="let tempProductCategory of productCategories">
+        <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+        {{ tempProductCategory.categoryName }}
+        </a>
+      </li>
+    </div>
     </ul>
     
   <div class="open" (click)="toggleNavList('open')">
@@ -35,6 +29,3 @@
   </div>
 </nav>
 
-
-  
-  

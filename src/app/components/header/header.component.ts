@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ProductCategory } from 'src/app/common/product-category';
+import { ProductServiceService } from 'src/app/services/product-service.service';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -10,14 +11,26 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
 
-
+  productCategories: ProductCategory[] = [];
   faBars = faBars;
 
+  constructor(private productService: ProductServiceService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.listProductCategories();
   }
+
+  listProductCategories() {
+
+    //Logging info from service
+    this.productService.getProductCategories().subscribe(
+      data => {
+        console.log('Product Categories=' + JSON.stringify(data));
+        this.productCategories = data;
+      }
+    );
+  }
+
 
 
   toggleNavList(action: string) {// this function opening the side menu in the mobile screen

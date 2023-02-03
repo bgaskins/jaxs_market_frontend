@@ -44,6 +44,18 @@ nav{
   text-decoration: none;
 }
 
+select {
+  display: none;
+}
+
+h6 {
+  display: none;
+}
+
+#categories {
+  display: none;
+}
+
 .open{
   position: absolute;
   top: 1em;
@@ -73,7 +85,10 @@ nav{
       display: none;
   }
 }
+
+
 @media(max-width:580px){
+
   nav{
       width: 100%;
   }
@@ -88,9 +103,14 @@ nav{
       right: -100%;
       height: 100%;
       width: 60%;
-      z-index: 1;
+      z-index: 10;
       padding-top: 5em;
       transition: .3s;
+  }
+
+  h6 {
+    padding-left: 1.5em;
+    padding-top: 2em;
   }
   .nav-list.active{
       right: 0;
@@ -104,6 +124,14 @@ nav{
   .nav-list li span{
       display: inline;
   }
+  #categories a {
+    font-size: 14px;
+  }
+
+  #categories {
+    display: block;
+  }
+
   .open,.close{
       display: block;
   }
@@ -113,5 +141,11 @@ nav{
 
   .cart-status {
     margin-left: 2em;
+  }
+
+  select {
+    display: block;
+    margin-left: 2em;
+    width: 75%;
   }
 }
