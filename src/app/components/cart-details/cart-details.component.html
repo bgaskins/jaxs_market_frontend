@@ -1,16 +1,17 @@
-<div class="main-content">
-    <div class="section-content section-content-p30">
-        <div class="container-fluid">
+<div class="container"> <!--Cart table-->
+
     
             <!--Dynamic product details -->
             <div *ngIf="cartItems.length > 0">
-                <table class="table table-bordered">
+                <table class="table table-responsive">
                     <tr>
-                        <th width="20%">Product Image</th>
-                        <th width="50%">Product Detail</th>
+                        <th width="30%">Product Image</th>
+                        <th width="30%">Product Detail</th>
                         <th width="30%"></th>
                     </tr>
-                    <tr *ngFor="let tempCartItem of cartItems">
+
+                    <!--Product info/image populates-->
+                    <tr *ngFor="let tempCartItem of cartItems"> 
                         <td>
                             <img src="{{ tempCartItem.imageUrl }}" class="img-responsive" width="150px" />
                         </td>
@@ -21,21 +22,20 @@
                         <td>
                             <div class="items">
                                 <label>Quantity:</label>
-                                <div class="row no-gutters">
+                                <div class="row">
                                     <div class="col">
-                                        <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+                                        <button (click)="incrementQuantity(tempCartItem)" class="btn" id="plus">
                                             <i class="fas fa-plus"></i>
                                         </button>
                                     </div>
-                                    <div class="col ml-4 mr-2">
+                                    <div class="col">
                                         {{ tempCartItem.quantity }}
                                     </div>
                                     <div class="col">
-                                        <button (click)="decrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+                                        <button (click)="decrementQuantity(tempCartItem)" class="btn" id="minus">
                                             <i class="fas fa-minus"></i>
                                         </button>
                                     </div>
-                                    <div class="col-8"></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -48,12 +48,12 @@
                     </tr>
                     <!-- Order summary -->
                     <tr>
-                        <td colspan="2"></td>
-                        <td style="font-weight: bold">
-                            <p>Total Quantity: {{ totalQuantity }}</p>
-                            <p>Shipping: FREE</p>
-                            <p>Total Price: {{ totalPrice | currency: 'USD' }}</p>
-                            <a routerLink="/checkout" class="btn btn-primary">Checkout</a>
+                        <td colspan="2" id="payment-summary"></td>
+                        <td id="total">
+                            <p><strong>Total Quantity:</strong> {{ totalQuantity }}</p>
+                            <p>Shipping: Free</p>
+                            <p><strong>Total Price:</strong> {{ totalPrice | currency: 'USD' }}</p>
+                            <a routerLink="/checkout" class="btn">Checkout</a>
                         </td>
                     </tr>
 
@@ -62,10 +62,9 @@
             </div>
 
             <!-- If the cart is empty a message occurs -->
-            <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-12" role="alert">
+            <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-10" role="alert">
                 Your shopping cart is empty. 
             </div>
 
         </div>
-    </div>
-</div>
+

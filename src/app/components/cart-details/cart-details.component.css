@@ -1,42 +1,61 @@
-.section-content {
-    margin-top: 10em;
-}
-
-#product-details {
-   width: 50%;
-}
 
 .table{
-    margin:0
+    margin-top: 2em;
+    width: 100%;
+    
 }
-table.table.table-bordered{
-    border:1px solid #ccc;
-    background:#fff
+
+.table th{
+    border:0 .5px solid #dee2e6;
 }
-.table-bordered td,.table-bordered th{
-    border:1px solid #dee2e6
-}
-table.table.table-bordered th{
+
+table.table th{
     background:#4a4c9a;
     color:#fff;
     font-size:14px;
-    padding:7px
+    padding:6px;
 }
+
+tr {
+  width: 100%;
+
+}
+
 .table-responsive{
     padding-right:1px
 }
-.items select{
-    width:100px;
-    height:40px;
-    border-radius:40px;
-    padding-left:15px;
-    margin-bottom:10px;
-    outline:0;
-    margin-left:5px
+
+#total, p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0;
 }
+
+#payment-summary, #total {
+  background:#4a4c9a;
+  color:#fff;
+  font-size:14px;
+  padding:6px;
+}
+
 
 .btn {
     background:#000000;
     color:#ffffff;
 
 }
+
+#minus, #plus {
+  background:#000000;
+  border: none;
+  color: white;
+  padding: 3px 5px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.alert { 
+    margin-top: 10em;
+}
+
+

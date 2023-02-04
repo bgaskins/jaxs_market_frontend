@@ -1,16 +1,13 @@
 <nav>
-    <div class="sidebar">
-        <ul class="list-unstyled navbar-list">
-
-            <li *ngFor="let tempProductCategory of productCategories">
-                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-                    {{ tempProductCategory.categoryName }}
-                </a>
-            </li>
-            <li>
-              <button class="btn btn-lg>">Need help?</button>
-            </li>
-        
+  <ul class="list-unstyled navbar-list">
+    <!--retrieve product category names from database using number id 1-5+ -->
+    <li *ngFor="let tempProductCategory of productCategories">
+        <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+            {{ tempProductCategory.categoryName }}
+        </a>
+        </li>
+        <li>
+            <a href="/contact-us" class="btn button" role="button" aria-pressed="true">Daily Deals</a>
+        </li>   
         </ul>
-    </div> 
-</nav>
+    </nav>

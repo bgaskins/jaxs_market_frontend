@@ -5,11 +5,11 @@
   font-family: sans-serif;
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: 200px 20px 1fr;
+  grid-template-columns: auto auto 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
   "header header header"
-  "side content content"
+  "side . content"
   "footer footer footer";
   height: 100vh;
 }
@@ -28,6 +28,5 @@ app-product-list {
 app-footer {
   grid-area: footer;
 }
-
 
 
