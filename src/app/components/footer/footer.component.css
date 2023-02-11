@@ -1,4 +1,5 @@
 footer {
+    position: sticky;
     width: 100vw;
     height: 100%;
     background-color: #f3db90;
@@ -7,16 +8,13 @@ footer {
 }
 
 
-ul {
-    margin: 1em;
+ul, a {
     list-style-type: none;
     text-align: left;
-}
-
-a {
     color: #000000;
     text-decoration: none;
 }
+
 
 a:hover {
     text-decoration: underline;
@@ -26,7 +24,7 @@ a:hover {
 
 
 .copyright {
-    text-align: left;
+    text-align:left;
     font-size: 12px;
-    margin-left: 20px;
+    margin-left:3em;
 }

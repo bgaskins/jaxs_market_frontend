@@ -1,31 +1,45 @@
+<!-- Header navigation starts here -->
 <nav>
-  <div class="logo">
-    <a href="/products">
-      <img src="assets/images/jaxslogo.png" alt="Jax's Market">
-    </a>
-  </div>
-
-    <ul class="nav-list">
-      <div class="close" (click)="toggleNavList('close')">
-        <fa-icon [icon]="faBars" alt="close"></fa-icon>
-      </div>
-      <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Who We Are</a></li>
-      <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Specials</a></li>
-      <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Locations</a></li>
-      <div class="cart-status"><app-cart-status></app-cart-status></div>
-    
-      <div id="categories">
-      <h6>Search Departments:</h6>
-      <li *ngFor="let tempProductCategory of productCategories">
-        <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-        {{ tempProductCategory.categoryName }}
-        </a>
-      </li>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/products">
+        <img src="assets/images/jaxslogo.png" alt="Jax's Market">
+      </a>
     </div>
-    </ul>
-    
-  <div class="open" (click)="toggleNavList('open')">
-    <fa-icon [icon]="faBars" alt="close"></fa-icon>
-  </div>
-</nav>
+    <!-- Logo section ends here -->
 
+    <!-- Nav list starts here -->
+      <ul class="nav-list">
+        <!-- Trigger to close the navigation list on click -->
+        <div class="close" (click)="toggleNavList('close')">
+          <fa-icon [icon]="faBars" alt="close"></fa-icon>
+        </div>
+        <!-- Links to Contact, Who We Are, Locations -->
+        <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Who We Are</a></li>
+        <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Specials</a></li>
+        <li class="top-link" (click)="toggleNavList('close')"><a routerLink="contact-us">Locations</a></li>
+        
+        <!-- Cart status -->
+        <div class="cart-status"><app-cart-status></app-cart-status></div>
+      
+        <!-- Product categories -->
+        <!--no display above 580px-->
+        <div id="categories">
+        <h6>Search Departments:</h6> 
+
+        <!-- Loop through the product categories to display them as links -->
+        <li *ngFor="let tempProductCategory of productCategories">
+          <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+          {{ tempProductCategory.categoryName }}
+          </a>
+        </li>
+      </div>
+      </ul>
+        <!-- Nav list ends here -->
+
+        <!-- Section to open the navigation list on click -->
+    <div class="open" (click)="toggleNavList('open')">
+        <!-- Icon for opening the navigation list -->
+      <fa-icon [icon]="faBars" alt="close"></fa-icon>
+    </div>
+  </nav>

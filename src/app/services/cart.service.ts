@@ -35,8 +35,7 @@ export class CartService {
     if (alreadyInCart) {
       // Increase count
       existingCartItem.quantity++;
-    }
-    else {
+    } else {
       // Add item to cart
       this.cartItems.push(theCartItem);
     }
@@ -51,8 +50,7 @@ export class CartService {
 
     if (theCartItem.quantity === 0) {
       this.deleteFromCart(theCartItem);
-    }
-    else {
+    } else {
       this.computeCartTotals();
     }
   }
@@ -84,19 +82,6 @@ export class CartService {
     this.totalPrice.next(totalPriceValue);
     this.totalQuantity.next(totalQuantityValue);
 
-    // Log data
-    this.logCartData(totalPriceValue, totalQuantityValue);
   }
 
-  logCartData(totalPriceValue: number, totalQuantityValue: number) {
-
-    console.log('Contents of the cart');
-    for (let tempCartItem of this.cartItems) {
-      const subTotalPrice = tempCartItem.quantity * tempCartItem.unitPrice;
-      console.log(`name: ${tempCartItem.name}, quantity=${tempCartItem.quantity}, unitPrice=${tempCartItem.unitPrice}, subTotalPrice=${subTotalPrice}`);
-    }
-
-    console.log(`totalPrice: ${totalPriceValue.toFixed(2)}, totalQuantity: ${totalQuantityValue}`);
-    console.log('----');
-  }
 }

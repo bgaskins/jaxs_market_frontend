@@ -1,142 +1,95 @@
-<div class="main-content">
-    <div class="section-content section-content-p30">
-        <div class="container-fluid">
-            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+<div class="container">
+        <div class="checkout-form">
+            <div class="row">
+                <div class="left-input">
+                    <div class="cart">
+                      <h4>Cart</h4>
+                      <div class="cart-item">
+                        <table class="table table-responsive">
+                          <tr>
+                              <th width="30%">Product</th>
+                              <th width="30%">Qty</th>
+                              <th width="30%">Price</th>
+                          </tr>
+                        <tr *ngFor="let tempCartItem of cartItems"> 
+                            <td>
+                               <p>{{ tempCartItem.name }}</p>
+                            </td>
+                            <td>
+                              <p>{{ tempCartItem.quantity }}</p>
+                            </td>
+                           <td>
+                               <p>{{ tempCartItem.unitPrice | currency: 'USD' }}</p>
+                           </td> 
+                          </tr>
+                          </table>
+                          <p>Total <span class="price" style="color:black"><b>{{ totalPrice | currency: 'USD' }}</b></span></p>
+                      
+                      </div> 
+                      <hr>
 
-            <!--Customer info -->
-
-                <div formGroupName="customer" class="form-area">
-                    <h3>Customer</h3>
-                    <div class="row">
-                        <div class="col-md-2"> <label> First Name </label></div>
-                        <input formControlName="firstName" type="text">
-                    <div class="row">
-                        <div class="col-md-2"> <label> Last Name </label></div>
-                        <input formControlName="lastName" type="text">
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2"> <label> Email </label></div>
-                        <input formControlName="email" type="text">
-                    </div>
-                </div>
-                </div>
-
-                <!--Mailing address-->
-                    <div formGroupName="mailingAddress" class="form-area">
-                        <h3>Mailing Address</h3>
-                        <div class="row">
-                            <div class="col-md-2"> <label> Address </label></div>
-                            <input formControlName="address" type="text">
+                    <form action="/">
+                      <div class="row">
+                        <div class="input-area">
+                          <h3>Billing Address</h3>
+                          <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                          <input type="text" id="fname" name="firstname" placeholder="James Doe">
+                          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                          <input type="text" id="email" name="email" placeholder="james@example.com">
+                          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                          <input type="text" id="adr" name="address" placeholder="123 Main St.">
+                          <label for="city"><i class="fa fa-institution"></i> City</label>
+                          <input type="text" id="city" name="city" placeholder="Boston">
+              
+                          <div class="row">
+                            <div class="input-area">
+                              <label for="state">State</label>
+                              <input type="text" id="state" name="state" placeholder="MA">
+                            </div>
+                            <div class="input-area">
+                              <label for="zip">Zip</label>
+                              <input type="text" id="zip" name="zip" placeholder="02108">
+                            </div>
+                          </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2"> <label> City </label></div>
-                            <input formControlName="city" type="text">
+              
+                        <div class="input-area">
+                          <h3>Payment</h3>
+                          <label for="fname">Accepted Cards</label>
+                          <div class="icon-container">
+                            <i class="fa-brands fa-cc-visa" style="color:#000000;"></i>
+                            <i class="fa-brands fa-cc-amex" style="color:#000000;"></i>
+                            <i class="fa-brands fa-cc-mastercard" style="color:#000000;"></i>
+                            <i class="fa-brands fa-cc-discover" style="color:#000000;"></i>
+                          </div>
+                          <label for="cname">Name on Card</label>
+                          <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                          <label for="ccnum">Credit card number</label>
+                          <input type="text" id="ccnum" name="cardnumber" placeholder="555 - 222 - 4444">
+                          <label for="expmonth">Exp Month</label>
+                          <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              
+                          <div class="row">
+                            <div class="input-area">
+                              <label for="expyear">Exp Year</label>
+                              <input type="text" id="expyear" name="expyear" placeholder="2018">
+                            </div>
+                            <div class="input-area">
+                              <label for="cvv">CVV</label>
+                              <input type="text" id="cvv" name="cvv" placeholder="352">
+                            </div>
+                          </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2"> <label> State </label></div>
-                            <input formControlName="state" type="text">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"> <label> Country </label></div>
-                            <input formControlName="country" type="text">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"> <label> Zipcode </label></div>
-                            <input formControlName="zipcode" type="text">
-                        </div>
-                        </div>
-
-                            <!-- Check box to making billing address same as mailing-->
-                            <div class="input-space">
-                                <label class="au-checkbox">
-                                    <input type="checkbox" (change)="copyMailingAddressToBilling($event)">
-                                    <span class="au-checkmark"></span> 
-                                    Billing address same as Shipping Address
-                                </label>
-                            </div>
-
-                        <!--Billing address-->
-                        <div formGroupName="billingAddress" class="form-area">
-                            <h3>Billing Address</h3>
-                            <div class="row">
-                                <div class="col-md-2"> <label> Address </label></div>
-                                <input formControlName="address" type="text">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"> <label> City </label></div>
-                                <input formControlName="city" type="text">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"> <label> State </label></div>
-                                <input formControlName="state" type="text">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"> <label> Country </label></div>
-                                <input formControlName="country" type="text">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"> <label> Zipcode </label></div>
-                                <input formControlName="zipcode" type="text">
-                            </div>
-                        </div>
-    
-                        <!--Credit card-->
-
-                        <div formGroupName="creditCard" class="form-area">
-                            <h3>Credit Card</h3>
-                            <div class="row">
-                                <div class="col-md-2"> <label> Card Type </label></div>
-                                <div class="col-md-9">
-                                    <div class="input-space">
-                                        <select formControlName="cardType">
-                                        <option>Visa</option>
-                                        <option>Mastercard</option>
-                                        <option>Apple Pay</option>
-                                        <option>American Express</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"> <label> Name on Card</label></div>
-                                    <input formControlName="name" type="text">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"> <label> Card Number </label></div>
-                                <input formControlName="cardNumber" type="text">
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-2"> <label> Expiration Month </label></div>
-                                    <input formControlName="expMonth" type="text">
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-2"> <label> Expiration Year </label></div>
-                                    <input formControlName="expYear" type="text">
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-2"> <label> Security Code </label></div>
-                                <input formControlName="securityCode" type="text">
-                            </div>
-                        </div>
-
-                       
-                    <!-- Order details -->
-                    <div class="form-area">
-                        <h3>Review Your Order</h3>
-
-                        <p>Total Quantity: {{ totalQuantity }}</p>
-                        <p>Shipping: FREE</p>
-                        <p>Total Price: {{ totalPrice | currency: 'USD' }}</p>
-                    </div>
-                        <!-- Purchase button-->
-                        <div class="text-center">  
-                            <button type="submit" class="btn btn-info">Buy
-                            </button>
-                        </div>
+              
+                      </div>
+                      <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                      </label>
+                      <input type="submit" value="Continue to checkout" class="btn">
                     </form>
+                  </div>
+                </div>
+              </div>
+                    <!--END OF FORM-->
             </div>
-    </div>
 </div>

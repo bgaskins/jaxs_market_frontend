@@ -32,44 +32,36 @@ export class ProductListComponent implements OnInit {
     this.searchMode = this.route.snapshot.paramMap.has('keyword');
     if (this.searchMode) {
       this.handleSearchProducts();
-    }
-    else {
+    } else {
       this.handleListProducts();
     }
-
   }
 
   handleSearchProducts() {
     const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
-
     // Search for product keyword
     this.productService.searchProducts(theKeyword).subscribe(
       data => {
         this.products = data;
-      }
-    )
+      })
   }
 
   handleListProducts() {
-
     // Check for the id parameter
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
 
     if (hasCategoryId) {
       // Convert string to number using +
       this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
-    }
-    else {
+    } else {
       // If no category, default to category id 1
       this.currentCategoryId = 1;
     }
-
     // Get products from the category id
     this.productService.getProductList(this.currentCategoryId).subscribe(
       data => {
         this.products = data;
-      }
-    )
+      })
   }
 
   addToCart(theProduct: Product) {

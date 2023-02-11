@@ -15,16 +15,15 @@ export class ProductDetailsComponent implements OnInit {
   product!: Product;
 
   constructor(private productService: ProductServiceService,
-              private cartService: CartService,
-              private route: ActivatedRoute) { }
- 
+    private cartService: CartService,
+    private route: ActivatedRoute) { }
+
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => {
       this.handleProductDetails();
     })
   }
   handleProductDetails() {
-
     // get the "id" param string. convert string to a number using the "+" symbol
     const theProductId: number = +this.route.snapshot.paramMap.get('id')!;
 

@@ -1,54 +1,88 @@
-.main-content{
-    padding-top: 10em;
-    margin-right: 4em;
-    min-height:100vh
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow:auto;
+  background-color: #ffffff;
+  display: grid;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+.checkout-form {
+  position:relative;
+  top: 1em;
 }
 
-.form-area{
-    width:75%;
-    background:#ffffff;
-    position:relative;
-    margin-bottom:45px;
-    padding:50px 20px;
-    border:3px solid rgb(45, 107, 182)
-}
-.form-area h3{
-    position:absolute;
-    top:-26px;
-    left:13px;
-    background:#ffffff;
-    padding:10px 20px;
-    font-weight:500;
-    display:inline-block
-}
-.input-space{
-    margin-bottom:20px;
-    margin-right: 4em
 
-}
-.input-space label{
-    padding-left:31px;
-    font-size:14px;
-    margin-bottom:50px
-}
-.input-space input[type=text]{
-    width:100%;
-    height:40px;
-    border-radius:30px;
-    outline:0;
-    padding:10px;
-    border:1px solid #000000
-}
-.input-space select{
-    width:100%;
-    height:40px;
-    border-radius:30px;
-    outline:0;
-    padding:0 10px;
-    border:1px solid #000000
+img {
+  width: 60px;
+  height: 110px;
 }
 
-.btn {
-    background:#000000;
-    color: #ffffff
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow:column;
 }
+
+i {
+  padding: 5px;
+}
+  
+  .input-area {
+    flex: 50%;
+  }
+  
+  .left-input { 
+    flex: 75%; 
+  }
+  
+  .cart,
+  .input-area,
+  .left-input {
+    padding: 0 16px;
+  }
+  
+
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 18px;
+  }
+  
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 580px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }

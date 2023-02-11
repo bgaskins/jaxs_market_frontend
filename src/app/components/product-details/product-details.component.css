@@ -1,9 +1,14 @@
+.image {
+    width: 200px;
+    height:260px;
+}
+
 .price{
     margin:15px 0 0;
     font-weight:800;
     color:#4a4c9a
 }
-.detail-section{
+.product-details{
     font-family: 'Readex Pro', sans-serif;
     margin-top:60px;
     text-align: center;

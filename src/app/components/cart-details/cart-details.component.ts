@@ -19,6 +19,7 @@ export class CartDetailsComponent implements OnInit {
     this.listCartDetails();
   }
 
+  // Add, subtract and delete items from cart
   incrementQuantity(theCartItem: CartItem) {
     this.cartService.addToCart(theCartItem);
   }
@@ -31,8 +32,9 @@ export class CartDetailsComponent implements OnInit {
     this.cartService.deleteFromCart(theCartItem);
   }
 
-  listCartDetails() {
+  ///
 
+  listCartDetails() {
 
     this.cartItems = this.cartService.cartItems;
 
@@ -40,12 +42,10 @@ export class CartDetailsComponent implements OnInit {
     this.cartService.totalPrice.subscribe(
       data => this.totalPrice = data
     );
-
     // get the total quantity
     this.cartService.totalQuantity.subscribe(
       data => this.totalQuantity = data
     );
-
     // Compute total price and total quantity 
     this.cartService.computeCartTotals();
   }
