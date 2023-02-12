@@ -1,19 +1,22 @@
+<div class="category-menu">
 <!-- Navigation bar component -->
-
 <nav>
-  <!-- List of product categories, retrieved from the database using a ngFor loop -->
-  <ul id="sidebar">
-    <!-- Loop through product categories and create a list item for each -->
-    <li *ngFor="let tempProductCategory of productCategories">
-        <!-- Create a link to the product category page using the routerLink directive -->
-        <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-            <!-- Display the category name retrieved from the database -->
-            {{ tempProductCategory.categoryName }}
-        </a>
-    </li>
-        <!-- Daily deals link -->
-    <li>
-         <a href="/contact-us" class="btn button" role="button" aria-pressed="true">Daily Deals</a>
-    </li>   
+    <div class="side-nav">
+    <!-- List of product categories, retrieved from the database using a ngFor loop -->
+        <ul>
+            <!-- Loop through product categories and create a list item for each -->
+            <li *ngFor="let tempProductCategory of productCategories">
+                <!-- Create a link to the product category page using the routerLink directive -->
+                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+                    <!-- Display the category name retrieved from the database -->
+                    {{ tempProductCategory.categoryName }}
+                </a>
+            </li>
+                <!-- Daily deals link -->
+            <li>
+                <a href="/contact-us" class="btn button" role="button" aria-pressed="true">Daily Deals</a>
+            </li>   
         </ul>
-    </nav>
+</div>
+</nav>
+
