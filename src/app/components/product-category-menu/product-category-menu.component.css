@@ -1,36 +1,71 @@
 nav {
+    display: flex;
+    flex-direction: column;
+    position:relative;
     width: 100%;
-    height:100vh;
-    color: #e5eaf2;
-    
+    height: 100%;
+    background-color:#f5f3f3;
+}
 
+.side-nav {
+    display: flex;
+    position: absolute;
 }
 
 ul {
+    position: relative;
+    right: 1.5em;
+    top: 2em;
     list-style: none;
 }
 
+/* LINKS */
 li, a {
-
+    position: relative;
+    top: .5em;
     font-family: 'Readex Pro', sans-serif;    
-    color: #000000;
+    color: #142837;
     text-decoration: none;
-    line-height: .5em;
-    margin: 2em 1em;
+    margin: 1em 1em;
  
     }
 
 .button {
-    background-color:bisque;
-    height: 35px;
-    line-height: 1.25em;
-    color: #000000;
+    position: relative;
+    top: 2em;
+    font-family: 'Readex Pro', sans-serif;
+    background-color:#0597d6;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-align: center;
     text-decoration: none;
-    
+    font-size: 16px;
+    margin-top: 1em;
 } 
-.image, img {
+
+.hours {
+    font-family: 'Readex Pro', sans-serif; 
+    font-size: 16px;  
+    color: #142837; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3.5em;
+    left: 2em;
+}
+
+.hours > td {
+    font-size: 14px;
+}
+
+
+/* IMAGE - Open 'til 12pm */
+
+.open-img, img {
     width: 100%;
-    height: 210px;
+    height: 150px;
 }
 
 
@@ -39,6 +74,12 @@ li, a {
     nav{
         display: none;
     }
+
+    img {
+        display: none;
+    }
 }
+
+
 
 

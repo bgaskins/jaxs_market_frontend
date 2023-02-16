@@ -14,24 +14,28 @@ export class ProductServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
+  //Retrieves a single product by its product ID.
   //Used with product details component
   getProduct(theProductId: number): Observable<Product> {
     const productUrl = `${this.baseUrl}/${theProductId}`;
     return this.httpClient.get<Product>(productUrl);
   }
 
+  //retrieves a list of products for a specific category ID
   //Used with product list component
   getProductList(theCategoryId: number): Observable<Product[]> {
     const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`;
     return this.getProducts(searchUrl);
   }
+
+  //Retrieves a list of products that match a keyword.
   //Used with product list component
   searchProducts(theKeyword: string): Observable<Product[]> {
     const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`;
     return this.getProducts(searchUrl);
   }
 
-
+  //Retrieves an array of products from the API
   getProducts(searchUrl: string): Observable<Product[]> {
     return this.httpClient.get<GetResponseProducts>(searchUrl).pipe(map(response => response._embedded.products));
   }

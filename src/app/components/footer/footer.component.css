@@ -1,7 +1,8 @@
 footer {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: #f3db90;
+    height: 25%;
+    background-color: #2f506b;
     font-family: 'Readex Pro', sans-serif;
 
 }
@@ -13,7 +14,7 @@ ul, a {
     list-style-type: none;
     text-align: left;
     font-size: 16px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -21,7 +22,7 @@ ul, a {
 a:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #000000;
+    text-decoration-color: #ffffff;
 }
 
 

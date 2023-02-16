@@ -1,24 +1,71 @@
-#contact {
-    margin-top: 10em;
-    margin-bottom: 10em;
+.container {
+	background-color: #ffffff;
+	position: relative;
+  top: 2em;
+	overflow:hidden;
+	width: 100%;
+	height: 100%;
 }
 
-.card {
-text-align: center;
-color: #ffffff;
-font-family: 'Readex Pro', sans-serif;
-background-color: #61B9C2;
-border: none;
+h2 {
+  font-size:2em;
+  margin-bottom:1em;
+}
+.form-container {
+  display:flex;
 }
 
-ul {
-    margin-top: 0;
+.contact-us {
+  display:flex;
+  flex:1;
+  height:460px;
+  background-color: #ffffff;
+  justify-content:center;
+  align-items:center;
 }
 
+.contact-us-inner {
+  width:70%;
+  height:80%;
+  text-align:center;
+}
 
-.card, li, a {
-    color: #ffffff;
-    background-color: #61B9C2;
-    font-family: 'Readex Pro', sans-serif;
-    text-decoration: none;
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.social {
+  color: #000000;
+  margin: .5em;
+}
+
+.left-inner-container {
+  height:50%;
+  width:80%;
+  text-align:center;
+  line-height:22px;
+}
+
+input, textarea {
+	background-color: #f6f6f6;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  font-size:0.8rem;
+}
+
+button {
+	border-radius: 20px;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+}
+
+form p {
+  text-align:left;
 }

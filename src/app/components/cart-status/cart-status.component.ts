@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -12,7 +11,6 @@ export class CartStatusComponent implements OnInit {
 
   totalPrice: number = 0.00;
   totalQuantity: number = 0;
-  faBasketShopping = faBasketShopping;
 
   constructor(private cartService: CartService) { }
 

@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { HeaderComponent } from './components/header/header.component';
     ContactUsComponent,
     FooterComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

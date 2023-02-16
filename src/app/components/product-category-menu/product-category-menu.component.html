@@ -1,22 +1,27 @@
-<div class="category-menu">
 <!-- Navigation bar component -->
-<nav>
-    <div class="side-nav">
-    <!-- List of product categories, retrieved from the database using a ngFor loop -->
-        <ul>
-            <!-- Loop through product categories and create a list item for each -->
-            <li *ngFor="let tempProductCategory of productCategories">
-                <!-- Create a link to the product category page using the routerLink directive -->
-                <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
-                    <!-- Display the category name retrieved from the database -->
-                    {{ tempProductCategory.categoryName }}
-                </a>
-            </li>
-                <!-- Daily deals link -->
-            <li>
-                <a href="/contact-us" class="btn button" role="button" aria-pressed="true">Daily Deals</a>
-            </li>   
-        </ul>
-</div>
-</nav>
-
+    <nav>
+        <!-- List of product categories, retrieved from the database using a ngFor loop -->
+            <ul>
+                <!-- Loop through product categories and create a list item for each -->
+                <li *ngFor="let tempProductCategory of productCategories">
+                    <!-- Create a link to the product category page using the routerLink directive -->
+                    <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
+                        <!-- Display the category name retrieved from the database -->
+                        {{ tempProductCategory.categoryName }}
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact-us" class="button" role="button" aria-pressed="true">Need Help?</a>
+                </li>
+                    <div class="hours">
+                        <th><i class="fa-solid fa-clock"></i> Hours:</th>
+                        <td>Mon-Sun 9am-12pm</td><br>
+                        <th><i class="fa-solid fa-phone"></i> Call us:</th>
+                        <td>555-403-2234</td>
+                    </div>   
+            </ul>
+            
+        <!--<div class="image">
+            <img src="assets/images/market-outdoors.png" alt="Jax's Market produce aisle">
+        </div> -->
+    </nav>
