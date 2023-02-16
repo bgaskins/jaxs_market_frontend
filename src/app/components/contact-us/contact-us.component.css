@@ -40,13 +40,6 @@ img {
   margin: .5em;
 }
 
-.left-inner-container {
-  height:50%;
-  width:80%;
-  text-align:center;
-  line-height:22px;
-}
-
 input, textarea {
 	background-color: #f6f6f6;
 	border: none;
