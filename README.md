@@ -20,7 +20,6 @@ Frontend: HTML5, CSS5, Typescript, Angular, Bootstrap
 <br>
 <h4>--- Project ---</h4>
 <br>
-
 <img width="75%" alt="jaxs-main" src="https://user-images.githubusercontent.com/96695276/219702456-c0001a95-e7e8-4a1c-894a-26f5505db593.png">
 
 
@@ -71,8 +70,8 @@ Alert appears when no product/s has been added to the cart.
 
 
 <h4>--- Mobile ---</h4>
-
-<img width="281" alt="jaxs-mobile" src="https://user-images.githubusercontent.com/96695276/219717504-3b4221f1-9b33-4196-bd02-c7d72afa7d49.png">
+<br>
+<img width="287" alt="jaxs-mobile" src="https://user-images.githubusercontent.com/96695276/219787014-21ad5ec2-cecb-4e38-99cf-d17f146a3b99.png">
 <img width="286" alt="jaxs-burger-menu" src="https://user-images.githubusercontent.com/96695276/219717516-d46376cc-e4a4-4484-8936-fb4ef22d7374.png">
 
 
