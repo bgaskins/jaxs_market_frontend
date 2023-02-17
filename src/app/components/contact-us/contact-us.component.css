@@ -51,13 +51,12 @@ input, textarea {
 }
 
 button {
-	border-radius: 20px;
+  font-family: 'Readex Pro', sans-serif;
+	border-radius: 8px;
 	background-color: #000000;
 	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
+	font-size: 16px;
+	padding: 6px 12px;
 }
 
 form p {
