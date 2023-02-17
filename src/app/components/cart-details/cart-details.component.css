@@ -43,6 +43,14 @@ td {
   color: #ffffff
 }
 
+button:hover {
+  background-color: #393838; 
+}
+
+.btn:hover {
+  background-color: #393838; 
+}
+
 .button {
   border: none;
   padding:8px 10px;

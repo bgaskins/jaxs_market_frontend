@@ -1,8 +1,10 @@
 <div class="container">
         <div class="checkout-form">
             <div class="row">
+                <!-- Contains column for the cart items -->
                 <div class="left-input">
                     <div class="cart">
+                      <!--Header-->
                       <h3>Cart</h3><hr>
                       <div class="cart-item">
                         <table class="table table-responsive">
@@ -11,14 +13,18 @@
                               <th width="30%">Qty</th>
                               <th width="30%">Price</th>
                           </tr>
+                      <!-- Loop for the cart items -->
                         <tr *ngFor="let tempCartItem of cartItems"> 
                             <td>
+                              <!-- Name of the cart item -->
                                <p>{{ tempCartItem.name }}</p>
                             </td>
                             <td>
+                              <!-- Quantity of the cart item -->
                               <p>{{ tempCartItem.quantity }}</p>
                             </td>
                            <td>
+                              <!-- Price of the cart item in USD -->
                                <p>{{ tempCartItem.unitPrice | currency: 'USD' }}</p>
                            </td> 
                           </tr>
@@ -28,6 +34,8 @@
                       </div> 
                       <hr>
 
+                    <!-- Form for the user to input their billing and payment details -->
+                    <!--Billing info-->
                     <form action="/">
                       <div class="row">
                         <div class="input-area">
@@ -52,7 +60,7 @@
                             </div>
                           </div>
                         </div>
-              
+                        <!--Payment info-->
                         <div class="input-area">
                           <h3>Payment</h3>
                           <label for="fname">Accepted Cards</label>
@@ -80,12 +88,12 @@
                             </div>
                           </div>
                         </div>
-              
+                        <!--Checkbox for similar shipping and billing addresses-->
                       </div>
                       <label>
                         <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
                       </label>
-                      <input type="submit" value="Continue to checkout" class="button">
+                      <input type="submit" value="Submit" class="button">
                     </form>
                   </div>
                 </div>

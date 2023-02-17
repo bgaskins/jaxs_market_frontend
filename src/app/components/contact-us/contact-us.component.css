@@ -1,5 +1,6 @@
 .container {
-	background-color: #ffffff;
+  font-family: 'Readex Pro', sans-serif;
+  background-color: #ffffff;
 	position: relative;
   top: 2em;
 	overflow:hidden;

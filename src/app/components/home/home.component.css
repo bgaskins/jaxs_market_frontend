@@ -1,8 +1,10 @@
 .container {
     display: flex;
-    position: relative;    
+    position: relative; 
+    overflow:scroll;   
     width: 100%;
-    height: 100vh;
+    min-height: 700px;
+    height: 100%;
   }
 
 .home {
@@ -26,7 +28,7 @@ h5 {
     color: #142837;
     font-family: 'Readex Pro', sans-serif;
 
-  }
+  } 
 
 p{
     position: relative;
@@ -50,7 +52,7 @@ p{
 .button {
     flex-direction: column;
     font-family: 'Readex Pro', sans-serif;
-    background-color:#1c2e79;
+    background-color:#3f3f5a;
     border: none;
     color: #ffffff;
     padding:12px 15px;
@@ -61,6 +63,12 @@ p{
     font-size: 16px;
 
 } 
+
+.button:hover {
+    background-color:#2f2f48;
+}
+
+
 
 
 
@@ -78,8 +86,22 @@ p{
 
 }
 
+@media(width < 768px){
 
-@media(width < 580px){
+    .home {
+        top: 4em;
+        left: 6.25em;
+    }
+
+    img {
+        height: 250px;
+    }
+
+
+}
+
+
+@media(width < 480px){
     .home {
         top: 4em;
         left: 3.5em;

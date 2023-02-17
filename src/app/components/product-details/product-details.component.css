@@ -1,3 +1,19 @@
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+}
+
+.product-details{
+    position: relative;
+    top: 1em;
+    flex-direction: column;
+    font-family: 'Readex Pro', sans-serif;
+    text-align: center;
+}
+
 .image {
     width: 200px;
     height:260px;
@@ -8,26 +24,70 @@
     font-weight:800;
     color:#4a4c9a
 }
-.product-details{
-    font-family: 'Readex Pro', sans-serif;
-    margin-top:60px;
-    text-align: center;
-}
-
-.btn {
-    background-color: #000000;
-    color: #ffffff;
-    margin-top: 1em;
-}
 
 h4 {
-    font-size: 18px;
+    font-size: 1rem;
     text-decoration: underline;
     margin-top: 2em;
 }
 
-a {
-    text-decoration: none;
-    color: #4a4c9a
+p {
+    font-size: 16px;
+    position: relative;
+    bottom: 2em;
+    padding: 4em 8em;
 }
 
+.btn {
+    position: relative;
+    bottom: 4em;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
+
+    
+
+@media(width < 768px){
+
+    
+    .image {
+        width: 170px;
+        height:230px;
+    }
+    
+    
+    h4 {
+        font-size: 18px;
+        text-decoration: underline;
+        margin-top: 2em;
+    }
+    
+    p {
+        position: relative;
+        bottom: 0;
+        padding: 2em;
+    }
+    
+    .btn {
+        bottom: 1em;
+
+}
+
+
+@media(width < 480px){
+
+    
+    p {
+        padding: 1em;
+    }
+
+    .btn {
+        bottom: 0;
+}
+
+
+}
+}

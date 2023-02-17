@@ -1,22 +1,25 @@
 <div class="container">
     <div class="products">
         <div class="row">
+            <!-- This iterates over a list of products -->
             <div *ngFor="let tempProduct of products" class="col-md-4 col-sm-4">
+                <!-- This anchor tag links to the individual product page -->
                 <a routerLink="/products/{{ tempProduct.id }} ">
+                    <!-- Displays the product image -->
                     <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
                 </a>
-
+                <!-- Displays product name and links to the individual product page -->
                     <a routerLink="/products/{{ tempProduct.id }}">
                     <h1>{{ tempProduct.name }}</h1>
                 </a>
-                            
+                     <!-- Displays the product unit price in USD -->
                     <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
                     <button (click)="addToCart(tempProduct)" class="button">Add to cart</button>
             </div>
         </div>
     </div>
             <!-- Alert message if no products are found-->
-            <div *ngIf="products?.length == 0" class="alert alert-warning col-md-8" role="alert">
+            <div *ngIf="products?.length == 0" class="alert alert-warning" role="alert">
                 No products found.
             </div>
                 
