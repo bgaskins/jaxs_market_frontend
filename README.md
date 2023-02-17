@@ -4,7 +4,14 @@ A dynamic and responsive grocery store app offering groceries and home goods for
 <br>
 <br>
 <br>
-
+<h4>--- Tech ---</h4>
+Backend: Java/Spring, SQL/MySQL 
+<br><br>
+Frontend: HTML5, CSS5, Typescript, Angular, Bootstrap
+<br>
+<br>
+<br>
+<br>
 <h4>--- Demos ---</h4>
 
 https://user-images.githubusercontent.com/96695276/219770959-8629e554-c8c2-49e2-9c49-a1843a4f6df6.mp4
@@ -16,17 +23,12 @@ https://user-images.githubusercontent.com/96695276/219770959-8629e554-c8c2-49e2-
 
 <h5>Mobile<h5>
 
-https://user-images.githubusercontent.com/96695276/219791346-5e8fb648-8b9c-40e9-8cd1-1d9056aaf0e2.mp4
+https://user-images.githubusercontent.com/96695276/219801278-128590f0-b931-4c4e-8476-3934c61dad5f.mp4
 
 <br>
 <br>
 <br>
-<h4>--- Tech ---</h4>
-Backend: Java/Spring, SQL/MySQL 
-<br><br>
-Frontend: HTML5, CSS5, Typescript, Angular, Bootstrap
-<br>
-<br>
+
 <h4>--- Project ---</h4>
 <br>
 <img width="75%" alt="jaxs-main" src="https://user-images.githubusercontent.com/96695276/219702456-c0001a95-e7e8-4a1c-894a-26f5505db593.png">
