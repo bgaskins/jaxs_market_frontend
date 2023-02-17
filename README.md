@@ -5,9 +5,18 @@ A dynamic and responsive grocery store app offering groceries and home goods for
 <br>
 <br>
 
-<h4>--- Demo ---</h4>
+<h4>--- Demos ---</h4>
 
 https://user-images.githubusercontent.com/96695276/219770959-8629e554-c8c2-49e2-9c49-a1843a4f6df6.mp4
+
+<br>
+<br>
+<br>
+
+
+<h5>Mobile<h5>
+
+https://user-images.githubusercontent.com/96695276/219791346-5e8fb648-8b9c-40e9-8cd1-1d9056aaf0e2.mp4
 
 <br>
 <br>
